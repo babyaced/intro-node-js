@@ -2,7 +2,7 @@ const data = require('./data')
 const api = require('./api')
 
 const showPostsForCurrentUser = (userId, cb) => {
-  getPostsForUser(userId, posts => {
+  api.getPostsForUser(userId, posts => {
     const postTemplates = data.posts.map(post => {
       return `
       <div class="post">
